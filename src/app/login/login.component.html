@@ -7,6 +7,9 @@
   <div>
     <input type="password" placeholder="Password" formControlName="password" />
   </div>
+  @if (errorMessage) {
+    <div> An error has occurred: {{errorMessage}}<br /> Please fix the error and try again. </div>
+  }
   <div>
     <button type="submit">Sign In</button>
   </div>
