@@ -6,7 +6,9 @@
 }
 @if (authService.currentUserSig()) {
   <div>
-    <span (click)="logout()">Logout</span>
+    Welcome, {{authService.currentUserSig()?.username}}!
+    <br />
+    <button (click)="logout()">Logout</button>
   </div>
 }
 <router-outlet></router-outlet>
